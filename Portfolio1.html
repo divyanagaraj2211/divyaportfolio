@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Divya's Portfolio</title>
+  <style>
+    /* General Styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fffacd; /* Light yellow background */
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      background-color: #4b0082; /* Indigo */
+      color: white;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: nowrap;
+      margin: 20px;
+    }
+
+    .photo-section {
+      flex: 0 0 250px;
+      text-align: center;
+      margin-right: 30px;
+    }
+
+    .photo-section img {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      border: 5px solid #4b0082;
+    }
+
+    .photo-section h2 {
+      margin-top: 10px;
+      font-size: 1.5rem;
+      color: #4b0082;
+    }
+
+    .content {
+      flex: 1;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    nav {
+      text-align: left;
+      margin-bottom: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #4b0082;
+      font-weight: bold;
+      font-size: 1.2rem;
+      display: block;
+      margin: 10px 0;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+      color: #800080; /* Darker Purple */
+    }
+
+    section {
+      margin: 50px 0;
+      padding: 20px;
+      border: 1px solid #ddd;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      display: none;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    section h2 {
+      text-align: center;
+      color: #4b0082;
+      margin-bottom: 10px;
+    }
+
+    section p, ul {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin: 5px 0;
+    }
+
+    /* Smooth Scroll Styling */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Divya's Portfolio</h1>
+  </header>
+
+  <div class="container">
+    <!-- Profile Photo Section -->
+    <div class="photo-section">
+      <img src="C:\Users\DIVYA N\Pictures\Screenshots\Screenshot 2025-01-18 133452.png" alt="Divya Nagaraj">
+      <h2>Divya Nagaraj</h2>
+    </div>
+
+    <!-- Navigation and Content -->
+    <div class="content">
+      <nav>
+        <a href="javascript:void(0)" onclick="showSection('introduction')">Introduction</a>
+        <a href="javascript:void(0)" onclick="showSection('skills')">Skills</a>
+        <a href="javascript:void(0)" onclick="showSection('projects')">Projects</a>
+        <a href="javascript:void(0)" onclick="showSection('certifications')">Certifications</a> <!-- Added Certification Link -->
+        <a href="javascript:void(0)" onclick="showSection('contact')">Contact</a>
+      </nav>
+
+      <!-- Sections -->
+      <section id="introduction">
+        <h2>Introduction</h2>
+        <p>
+          Hi, I'm Divya Nagaraj, a passionate software developer aiming to make an impact in the field of technology. My goal is to combine innovation with creativity to solve real-world problems. I specialize in developing user-friendly applications and systems that cater to diverse needs, with a particular interest in accessibility and data-driven solutions. I am always eager to learn and explore new technologies to stay ahead in the rapidly evolving tech landscape.
+
+With a strong foundation in programming, data science, and web development, I am committed to creating solutions that are both efficient and scalable. My experience includes working on projects in areas like machine learning, predictive analytics, and web and mobile app development. I am driven by the challenge of solving complex problems and collaborating with teams to bring ideas to life.
+
+By continuously improving my skills and contributing to meaningful projects, I aspire to grow both professionally and personally while making a positive contribution to the tech community.
+        </p>
+ <p>
+    You can check out my LeetCode profile for my problem-solving skills: <a href="https://leetcode.com/u/divyanagaraj/" target="_blank">My LeetCode Profile</a>
+  </p>
+      </section>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+          <li>
+            <a href="javascript:void(0)" onclick="toggleSkill('programming')">Programming</a>
+            <ul id="programming" style="display: none;">
+              <li>C, C++, HTML, CSS, JavaScript (Basics), Python, Java, SQL</li>
+            </ul>
+          </li>
+          <li>
+            <a href="javascript:void(0)" onclick="toggleSkill('core')">Core</a>
+            <ul id="core" style="display: none;">
+              <li>Data Structures & Algorithms</li>
+              <li>Database Management System</li>
+            </ul>
+          </li>
+          <li>
+            <a href="javascript:void(0)" onclick="toggleSkill('tools')">Tools</a>
+            <ul id="tools" style="display: none;">
+              <li>VS Code, Git & Github, Anaconda (Jupyter), Blender, Figma, Canva</li>
+            </ul>
+          </li>
+          <li>
+            <a href="javascript:void(0)" onclick="toggleSkill('libraries')">Libraries</a>
+            <ul id="libraries" style="display: none;">
+              <li>NumPy, Pandas</li>
+            </ul>
+          </li>
+          <li>
+            <a href="javascript:void(0)" onclick="toggleSkill('visualization')">Visualization Tools</a>
+            <ul id="visualization" style="display: none;">
+              <li>Tableau (Basics), Power BI (Basics)</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+          <li>
+            <strong>YIELDIFY [Smart Agriculture System]</strong> - My Role: Frontend, Research (May 2024)
+            <ul>
+              <li>Developed an integrated smart agriculture system using Convolutional Neural Networks (CNN) and DenseNet121 for pest detection with a 96% accuracy rate.</li>
+              <li>Applications: Plant disease detection, pest detection, land leveling, soil type prediction, and crop recommendation.</li>
+            </ul>
+          </li>
+          <li>
+            <strong>ASD PREDICTION [Neurological Disorder Prediction System]</strong> - My Role: Backend, Frontend-Streamlit, Research (Nov 2024)
+            <ul>
+              <li>Developed a machine learning-based system leveraging Support Vector Machines (SVM) and Random Forest algorithms to predict Autism Spectrum Disorder (ASD) with over 93% accuracy.</li>
+              <li>Applications: Early ASD screening, behavioral pattern analysis, objective diagnosis support, and data-driven clinical decision-making.</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Real Estate Price Analysis</strong>
+            <ul>
+              <li>Aim: Predict property prices and analyze market trends based on features like location, amenities, and economic factors.</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <!-- New Certification Section -->
+<section id="certifications">
+  <h2>Certifications</h2>
+  <ul>
+    <li>Problem Solving using Programming in C, Computer Architecture | NPTEL - 2024</li>
+    <li>Python For Beginners - Learn all the basics of Python, Mastering DSA Using C and C++ | Udemy - 2024</li>
+    <li>The Complete Introduction to C++ Programming | Udemy - 2024</li>
+    <li>C for Everyone: Programming Fundamentals | Coursera - 2024</li>
+    <li>Python (Basics), SQL (Basics) | HackerRank - 2024</li>
+    <li>Introduction to Artificial Intelligence, Matplotlib | Great Learning - 2023</li>
+    <li>Pandas | Kaggle - 2024</li>
+    <li>SQL | SkillRack - 2024</li>
+  </ul>
+</section>
+
+
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:divyanagaraj2211@gmail.com">divyanagaraj2211@gmail.com</a></p>
+        <p>Phone: +91-7845952214</p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/divya-nagaraj-38b5a128b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">linkedin.com/in/divya-nagaraj</a></p>
+        <p>GitHub: <a href="https://github.com/DIVYAN2211" target="_blank">github.com/divyanagaraj</a></p>
+      </section>
+    </div>
+  </div>
+
+  <script>
+    function toggleSkill(skillId) {
+      // Get the clicked skill category element
+      const skillElement = document.getElementById(skillId);
+      
+      // Toggle the visibility of the skill list
+      if (skillElement.style.display === "none" || skillElement.style.display === "") {
+        skillElement.style.display = "block";
+      } else {
+        skillElement.style.display = "none";
+      }
+    }
+
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll("section");
+      sections.forEach((section) => {
+        if (section.id === sectionId) {
+          section.classList.add("active");
+        } else {
+          section.classList.remove("active");
+        }
+      });
+    }
+  </script>
+</body>
+</html>
